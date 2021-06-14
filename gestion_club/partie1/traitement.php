@@ -5,7 +5,7 @@
     <title>Test</title>
 </head>
 <body>
-<?php if (empty($_GET['id']) || empty($_GET['nom']) || empty($_GET['description']) || empty($_GET['adresse']) || empty($_GET['domaine'])) {
+<?php if (isset($_GET['id']) && isset($_GET['nom']) && isset($_GET['description']) && isset($_GET['adresse']) && isset($_GET['domaine'])) {
     ?>
     <table border="1">
         <tr>
@@ -28,6 +28,7 @@
         <tr>
             <td>
                 <?php echo $_GET['id']; ?>
+
 
             </td>
             <td>
