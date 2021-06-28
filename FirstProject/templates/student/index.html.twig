@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StudentController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h3>La liste des etudiant</h3>
+    <table border="2">
+        <tr>
+            <td>ID</td>
+            <td>NSC</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            {% for k in afficheS %}
+            <td>{{ k.id }}</td>
+            <td>{{ k.nsc }}</td>
+            <td>{{ k.email }}</td>
+            <td>
+                <a href="{{ path('deleteS', {'id': k.id}) }}"> supprimer</a>
+                <a href="{{ path('updateStudent', {'id': k.id}) }}"> update</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
