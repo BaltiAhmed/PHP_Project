@@ -80,6 +80,7 @@ require_once 'ClubController.php';
 
                     $clubC = new ClubController();
                     $clubC->deleteClub($id);
+
                 }
                 ?>
 

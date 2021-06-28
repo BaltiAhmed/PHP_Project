@@ -26,7 +26,9 @@ class ClubController
     public function deleteClub($id)
     {
         $conn = Config::getConnexion();
-        $sql = 'DELETE FROM club WHERE id='.$id;
+        $sql = 'DELETE FROM club WHERE id=' . $id;
         $conn->query($sql);
+
+
     }
 }
